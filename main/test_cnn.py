@@ -5,7 +5,7 @@ from sb3_contrib import MaskablePPO
 
 from snake_game_custom_wrapper_cnn import SnakeEnv
 
-MODEL_PATH = r"trained_models_cnn/ppo_snake_final"
+MODEL_PATH = r"trained_models_cnn/ppo_snake_100000000_steps"
 
 NUM_EPISODE = 10
 

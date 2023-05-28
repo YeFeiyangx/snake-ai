@@ -10,7 +10,7 @@ from sb3_contrib.common.wrappers import ActionMasker
 
 from snake_game_custom_wrapper_mlp import SnakeEnv
 
-NUM_ENV = 32
+NUM_ENV = 15
 LOG_DIR = "logs"
 os.makedirs(LOG_DIR, exist_ok=True)
 
@@ -73,7 +73,7 @@ def main():
 
     # Writing the training logs from stdout to a file
     original_stdout = sys.stdout
-    log_file_path = os.path.join(save_dir, "training_log.txt")
+    log_file_path = os.path.join(save_dir, "training_log2.txt")
     with open(log_file_path, 'w') as log_file:
         sys.stdout = log_file
 
@@ -87,7 +87,7 @@ def main():
     sys.stdout = original_stdout
 
     # Save the final model
-    model.save(os.path.join(save_dir, "ppo_snake_final.zip"))
+    model.save(os.path.join(save_dir, "ppo_snake_final2.zip"))
 
 if __name__ == "__main__":
     main()
